@@ -70,7 +70,10 @@
                     </select>
                 </div>
                 <div class="menuBtn" onClick="openWBox()">About</div>
-                <div class="menuBtn" onClick="openUrl('https://github.com/taluttasgiran/materialcolors')"><i class="fa fa-github"></i> Avaliable on Github</div>
+                <div class="menuBtn"
+                     onClick="openUrl('https://github.com/taluttasgiran/materialcolors')"><i
+                        class="fa fa-github"></i> Avaliable on Github
+                </div>
             </div>
 
             <div class="col-md-1 col-xs-1 col-sm-1 pull-right nopadding">
@@ -883,16 +886,15 @@
     </div>
 </div>
 <script>
-
   const { clipboard, remote, shell } = require('electron');
 
   storage        = window.localStorage;
   var welcomeBox = document.getElementById("welcomeBox");
-
   if (storage.getItem("wBoxShow") === null) {
     storage.setItem("wBoxShow", true);
   }
-  if (storage.getItem("wBoxShow") === true) {
+
+  if (storage.getItem("wBoxShow") === "true" || storage.getItem("wBoxShow") === true) {
     welcomeBox.style.display = "inherit";
   } else {
     welcomeBox.style.display = "none"

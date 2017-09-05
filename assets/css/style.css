@@ -5622,8 +5622,8 @@ header .menuBtn {
 
 .box {
   width: 100%;
-  position: relative;
   height: 50px;
+  position: relative;
   cursor: pointer;
 }
 .box .text {
@@ -5635,6 +5635,8 @@ header .menuBtn {
   position: absolute;
 }
 .box:active {
+  -webkit-transform-origin: bottom left;
+  transform-origin: bottom left;
   z-index: 9999;
   border: 2px solid #f1f1f1;
   transform: scale(2);

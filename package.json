@@ -1,7 +1,10 @@
 {
   "name": "materialColors",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "main": "main.js",
+  "scripts": {
+    "windows-packager" : "electron-packager . --overwrite --icon=assets/materialColors.ico"
+  },
   "dependencies": {
     "electron-winstaller": "^2.6.3",
     "electron-squirrel-startup": "^1.0.0",

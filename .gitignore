@@ -1,3 +1,6 @@
 node_modules
 assets/.sass-cache
 assets/css/style.css.map
+.idea
+materialColors-win32-x64/
+install
