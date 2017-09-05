@@ -18,7 +18,7 @@ Material Colors is a simple color app powered with Electron
 
 <h4 align="center">How to use?</h4>
 
-* If you want installer.exe please look at the **Release** page. // This is not avaliable. Please wait...
+* If you want installer.exe please look at the **Release** page.
 
 ----------
 
