@@ -1,0 +1,998 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+</head>
+<body style="margin: 0;padding: 0;">
+<div id="welcomeBox" class="welcomeText">
+    <div class="centered">
+        <div class="content">
+            <div class="centered">
+                <div class="row">
+                    <div class="col-xs-24">
+                        <div class="wLogo">
+                            <img src="assets/img/logo.png" alt="">
+                        </div>
+                    </div>
+                    <div class="col-xs-24">
+                        <div class="wText">
+                            It was made by <span class="madeBy"
+                                                 onClick="openCreator()"> <i
+                                class="fa fa-github-square"></i> taluttasgiran</span>
+                            <br>
+                            You can use it as you like and you can distribute it.
+                            <br>
+                            <ul>
+                                <li onClick="openUrl('https://twitter.com/taluttasgiran')">
+                                    <i class="fa fa-twitter-square"></i> Twitter
+                                </li>
+                                <li onClick="openUrl('https://facebook.com/taluttasgiran')">
+                                    <i class="fa fa-facebook-square"></i> Facebook
+                                </li>
+                                <li onClick="openUrl('https://instagram.com/taluttasgiran')">
+                                    <i class="fa fa-instagram"></i> Instagram
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-xs-24">
+                        <div class="wFooter">
+                            <div id="notShowAgain" class="btn notShowAgain"
+                                 onClick="notShowAgain(this)"><i
+                                    id="wCheck" class="fa fa-check"></i> Not show again!
+                            </div>
+                            <div class="btn closeBox pull-right" onClick="closeWBox(this)">Close!
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+<header>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-18 col-xs-18 col-sm-18 pull-left nopadding">
+                <div class="logo">Material Colors
+                    <small>made by <span onClick="openCreator()"
+                                         class="creator">taluttasgiran</span></small>
+                </div>
+                <div class="copyType">
+                    Copy to clipboard :
+                    <select id="copyType" onChange="copyType(this)">
+                        <option value="HEX">HEX</option>
+                        <option value="#HEX">#HEX</option>
+                        <option value="RGBA">RGBA</option>
+                        <option value="RGB">RGB</option>
+                    </select>
+                </div>
+                <div class="menuBtn" onClick="openWBox()">About</div>
+                <div class="menuBtn" onClick="openUrl('https://github.com/taluttasgiran/materialcolors')"><i class="fa fa-github"></i> Avaliable on Github</div>
+            </div>
+
+            <div class="col-md-1 col-xs-1 col-sm-1 pull-right nopadding">
+                <div id="close-btn" class="button close-btn" onClick="cls()"><i
+                        class="fa fa-remove"></i></div>
+            </div>
+            <div class="col-md-1 col-xs-1 col-sm-1 pull-right nopadding">
+                <div id="min-btn" class="button minimize-btn" onClick="min()"><i
+                        class="fa fa-window-minimize"></i></div>
+            </div>
+        </div>
+    </div>
+</header>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-1 col-xs-1 col-sm-1  nopadding">
+            <div class="col-xs-24  nopadding">
+                <div class="red">
+                    <div onClick="color(this)" class="box red base">
+                        <div class="text">
+                            Base
+                        </div>
+                    </div>
+                    <div onClick="color(this)" class="box red lighten-5">
+                        <div class="text">50</div>
+                    </div>
+                    <div onClick="color(this)" class="box red lighten-4">
+                        <div class="text">100</div>
+                    </div>
+                    <div onClick="color(this)" class="box red lighten-3">
+                        <div class="text">200</div>
+                    </div>
+                    <div onClick="color(this)" class="box red lighten-2">
+                        <div class="text">300</div>
+                    </div>
+                    <div onClick="color(this)" class="box red lighten-1">
+                        <div class="text">400</div>
+                    </div>
+                    <div onClick="color(this)" class="box red base">
+                        <div class="text">500</div>
+                    </div>
+                    <div onClick="color(this)" class="box red darken-1">
+                        <div class="text">600</div>
+                    </div>
+                    <div onClick="color(this)" class="box red darken-2">
+                        <div class="text">700</div>
+                    </div>
+                    <div onClick="color(this)" class="box red darken-3">
+                        <div class="text">800</div>
+                    </div>
+                    <div onClick="color(this)" class="box red darken-4">
+                        <div class="text">900</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-1 col-xs-1 col-sm-1  nopadding">
+            <div class="col-xs-24  nopadding">
+                <div class="pink">
+                    <div onClick="color(this)" class="box pink base">
+                        <div class="text">
+                            Base
+                        </div>
+                    </div>
+                    <div onClick="color(this)" class="box pink lighten-5">
+                        <div class="text">50</div>
+                    </div>
+                    <div onClick="color(this)" class="box pink lighten-4">
+                        <div class="text">100</div>
+                    </div>
+                    <div onClick="color(this)" class="box pink lighten-3">
+                        <div class="text">200</div>
+                    </div>
+                    <div onClick="color(this)" class="box pink lighten-2">
+                        <div class="text">300</div>
+                    </div>
+                    <div onClick="color(this)" class="box pink lighten-1">
+                        <div class="text">400</div>
+                    </div>
+                    <div onClick="color(this)" class="box pink base">
+                        <div class="text">500</div>
+                    </div>
+                    <div onClick="color(this)" class="box pink darken-1">
+                        <div class="text">600</div>
+                    </div>
+                    <div onClick="color(this)" class="box pink darken-2">
+                        <div class="text">700</div>
+                    </div>
+                    <div onClick="color(this)" class="box pink darken-3">
+                        <div class="text">800</div>
+                    </div>
+                    <div onClick="color(this)" class="box pink darken-4">
+                        <div class="text">900</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-1 col-xs-1 col-sm-1  nopadding">
+            <div class="col-xs-24  nopadding">
+                <div class="purple">
+                    <div onClick="color(this)" class="box purple base">
+                        <div class="text">
+                            Base
+                        </div>
+                    </div>
+                    <div onClick="color(this)" class="box purple lighten-5">
+                        <div class="text">50</div>
+                    </div>
+                    <div onClick="color(this)" class="box purple lighten-4">
+                        <div class="text">100</div>
+                    </div>
+                    <div onClick="color(this)" class="box purple lighten-3">
+                        <div class="text">200</div>
+                    </div>
+                    <div onClick="color(this)" class="box purple lighten-2">
+                        <div class="text">300</div>
+                    </div>
+                    <div onClick="color(this)" class="box purple lighten-1">
+                        <div class="text">400</div>
+                    </div>
+                    <div onClick="color(this)" class="box purple base">
+                        <div class="text">500</div>
+                    </div>
+                    <div onClick="color(this)" class="box purple darken-1">
+                        <div class="text">600</div>
+                    </div>
+                    <div onClick="color(this)" class="box purple darken-2">
+                        <div class="text">700</div>
+                    </div>
+                    <div onClick="color(this)" class="box purple darken-3">
+                        <div class="text">800</div>
+                    </div>
+                    <div onClick="color(this)" class="box purple darken-4">
+                        <div class="text">900</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-1 col-xs-1 col-sm-1  nopadding">
+            <div class="col-xs-24  nopadding">
+                <div class="deep-purple">
+                    <div onClick="color(this)" class="box deep-purple base">
+                        <div class="text">
+                            Base
+                        </div>
+                    </div>
+                    <div onClick="color(this)" class="box deep-purple lighten-5">
+                        <div class="text">50</div>
+                    </div>
+                    <div onClick="color(this)" class="box deep-purple lighten-4">
+                        <div class="text">100</div>
+                    </div>
+                    <div onClick="color(this)" class="box deep-purple lighten-3">
+                        <div class="text">200</div>
+                    </div>
+                    <div onClick="color(this)" class="box deep-purple lighten-2">
+                        <div class="text">300</div>
+                    </div>
+                    <div onClick="color(this)" class="box deep-purple lighten-1">
+                        <div class="text">400</div>
+                    </div>
+                    <div onClick="color(this)" class="box deep-purple base">
+                        <div class="text">500</div>
+                    </div>
+                    <div onClick="color(this)" class="box deep-purple darken-1">
+                        <div class="text">600</div>
+                    </div>
+                    <div onClick="color(this)" class="box deep-purple darken-2">
+                        <div class="text">700</div>
+                    </div>
+                    <div onClick="color(this)" class="box deep-purple darken-3">
+                        <div class="text">800</div>
+                    </div>
+                    <div onClick="color(this)" class="box deep-purple darken-4">
+                        <div class="text">900</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-1 col-xs-1 col-sm-1  nopadding">
+            <div class="col-xs-24  nopadding">
+                <div class="indigo">
+                    <div onClick="color(this)" class="box indigo base">
+                        <div class="text">
+                            Base
+                        </div>
+                    </div>
+                    <div onClick="color(this)" class="box indigo lighten-5">
+                        <div class="text">50</div>
+                    </div>
+                    <div onClick="color(this)" class="box indigo lighten-4">
+                        <div class="text">100</div>
+                    </div>
+                    <div onClick="color(this)" class="box indigo lighten-3">
+                        <div class="text">200</div>
+                    </div>
+                    <div onClick="color(this)" class="box indigo lighten-2">
+                        <div class="text">300</div>
+                    </div>
+                    <div onClick="color(this)" class="box indigo lighten-1">
+                        <div class="text">400</div>
+                    </div>
+                    <div onClick="color(this)" class="box indigo base">
+                        <div class="text">500</div>
+                    </div>
+                    <div onClick="color(this)" class="box indigo darken-1">
+                        <div class="text">600</div>
+                    </div>
+                    <div onClick="color(this)" class="box indigo darken-2">
+                        <div class="text">700</div>
+                    </div>
+                    <div onClick="color(this)" class="box indigo darken-3">
+                        <div class="text">800</div>
+                    </div>
+                    <div onClick="color(this)" class="box indigo darken-4">
+                        <div class="text">900</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-1 col-xs-1 col-sm-1  nopadding">
+            <div class="col-xs-24  nopadding">
+                <div class="blue">
+                    <div onClick="color(this)" class="box blue base">
+                        <div class="text">
+                            Base
+                        </div>
+                    </div>
+                    <div onClick="color(this)" class="box blue lighten-5">
+                        <div class="text">50</div>
+                    </div>
+                    <div onClick="color(this)" class="box blue lighten-4">
+                        <div class="text">100</div>
+                    </div>
+                    <div onClick="color(this)" class="box blue lighten-3">
+                        <div class="text">200</div>
+                    </div>
+                    <div onClick="color(this)" class="box blue lighten-2">
+                        <div class="text">300</div>
+                    </div>
+                    <div onClick="color(this)" class="box blue lighten-1">
+                        <div class="text">400</div>
+                    </div>
+                    <div onClick="color(this)" class="box blue base">
+                        <div class="text">500</div>
+                    </div>
+                    <div onClick="color(this)" class="box blue darken-1">
+                        <div class="text">600</div>
+                    </div>
+                    <div onClick="color(this)" class="box blue darken-2">
+                        <div class="text">700</div>
+                    </div>
+                    <div onClick="color(this)" class="box blue darken-3">
+                        <div class="text">800</div>
+                    </div>
+                    <div onClick="color(this)" class="box blue darken-4">
+                        <div class="text">900</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-1 col-xs-1 col-sm-1  nopadding">
+            <div class="col-xs-24  nopadding">
+                <div class="light-blue">
+                    <div onClick="color(this)" class="box light-blue base">
+                        <div class="text">
+                            Base
+                        </div>
+                    </div>
+                    <div onClick="color(this)" class="box light-blue lighten-5">
+                        <div class="text">50</div>
+                    </div>
+                    <div onClick="color(this)" class="box light-blue lighten-4">
+                        <div class="text">100</div>
+                    </div>
+                    <div onClick="color(this)" class="box light-blue lighten-3">
+                        <div class="text">200</div>
+                    </div>
+                    <div onClick="color(this)" class="box light-blue lighten-2">
+                        <div class="text">300</div>
+                    </div>
+                    <div onClick="color(this)" class="box light-blue lighten-1">
+                        <div class="text">400</div>
+                    </div>
+                    <div onClick="color(this)" class="box light-blue base">
+                        <div class="text">500</div>
+                    </div>
+                    <div onClick="color(this)" class="box light-blue darken-1">
+                        <div class="text">600</div>
+                    </div>
+                    <div onClick="color(this)" class="box light-blue darken-2">
+                        <div class="text">700</div>
+                    </div>
+                    <div onClick="color(this)" class="box light-blue darken-3">
+                        <div class="text">800</div>
+                    </div>
+                    <div onClick="color(this)" class="box light-blue darken-4">
+                        <div class="text">900</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-1 col-xs-1 col-sm-1  nopadding">
+            <div class="col-xs-24  nopadding">
+                <div class="cyan">
+                    <div onClick="color(this)" class="box cyan base">
+                        <div class="text">
+                            Base
+                        </div>
+                    </div>
+                    <div onClick="color(this)" class="box cyan lighten-5">
+                        <div class="text">50</div>
+                    </div>
+                    <div onClick="color(this)" class="box cyan lighten-4">
+                        <div class="text">100</div>
+                    </div>
+                    <div onClick="color(this)" class="box cyan lighten-3">
+                        <div class="text">200</div>
+                    </div>
+                    <div onClick="color(this)" class="box cyan lighten-2">
+                        <div class="text">300</div>
+                    </div>
+                    <div onClick="color(this)" class="box cyan lighten-1">
+                        <div class="text">400</div>
+                    </div>
+                    <div onClick="color(this)" class="box cyan base">
+                        <div class="text">500</div>
+                    </div>
+                    <div onClick="color(this)" class="box cyan darken-1">
+                        <div class="text">600</div>
+                    </div>
+                    <div onClick="color(this)" class="box cyan darken-2">
+                        <div class="text">700</div>
+                    </div>
+                    <div onClick="color(this)" class="box cyan darken-3">
+                        <div class="text">800</div>
+                    </div>
+                    <div onClick="color(this)" class="box cyan darken-4">
+                        <div class="text">900</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-1 col-xs-1 col-sm-1  nopadding">
+            <div class="col-xs-24  nopadding">
+                <div class="teal">
+                    <div onClick="color(this)" class="box teal base">
+                        <div class="text">
+                            Base
+                        </div>
+                    </div>
+                    <div onClick="color(this)" class="box teal lighten-5">
+                        <div class="text">50</div>
+                    </div>
+                    <div onClick="color(this)" class="box teal lighten-4">
+                        <div class="text">100</div>
+                    </div>
+                    <div onClick="color(this)" class="box teal lighten-3">
+                        <div class="text">200</div>
+                    </div>
+                    <div onClick="color(this)" class="box teal lighten-2">
+                        <div class="text">300</div>
+                    </div>
+                    <div onClick="color(this)" class="box teal lighten-1">
+                        <div class="text">400</div>
+                    </div>
+                    <div onClick="color(this)" class="box teal base">
+                        <div class="text">500</div>
+                    </div>
+                    <div onClick="color(this)" class="box teal darken-1">
+                        <div class="text">600</div>
+                    </div>
+                    <div onClick="color(this)" class="box teal darken-2">
+                        <div class="text">700</div>
+                    </div>
+                    <div onClick="color(this)" class="box teal darken-3">
+                        <div class="text">800</div>
+                    </div>
+                    <div onClick="color(this)" class="box teal darken-4">
+                        <div class="text">900</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-1 col-xs-1 col-sm-1  nopadding">
+            <div class="col-xs-24  nopadding">
+                <div class="green">
+                    <div onClick="color(this)" class="box green base">
+                        <div class="text">
+                            Base
+                        </div>
+                    </div>
+                    <div onClick="color(this)" class="box green lighten-5">
+                        <div class="text">50</div>
+                    </div>
+                    <div onClick="color(this)" class="box green lighten-4">
+                        <div class="text">100</div>
+                    </div>
+                    <div onClick="color(this)" class="box green lighten-3">
+                        <div class="text">200</div>
+                    </div>
+                    <div onClick="color(this)" class="box green lighten-2">
+                        <div class="text">300</div>
+                    </div>
+                    <div onClick="color(this)" class="box green lighten-1">
+                        <div class="text">400</div>
+                    </div>
+                    <div onClick="color(this)" class="box green base">
+                        <div class="text">500</div>
+                    </div>
+                    <div onClick="color(this)" class="box green darken-1">
+                        <div class="text">600</div>
+                    </div>
+                    <div onClick="color(this)" class="box green darken-2">
+                        <div class="text">700</div>
+                    </div>
+                    <div onClick="color(this)" class="box green darken-3">
+                        <div class="text">800</div>
+                    </div>
+                    <div onClick="color(this)" class="box green darken-4">
+                        <div class="text">900</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-1 col-xs-1 col-sm-1  nopadding">
+            <div class="col-xs-24  nopadding">
+                <div class="light-green">
+                    <div onClick="color(this)" class="box light-green base">
+                        <div class="text">
+                            Base
+                        </div>
+                    </div>
+                    <div onClick="color(this)" class="box light-green lighten-5">
+                        <div class="text">50</div>
+                    </div>
+                    <div onClick="color(this)" class="box light-green lighten-4">
+                        <div class="text">100</div>
+                    </div>
+                    <div onClick="color(this)" class="box light-green lighten-3">
+                        <div class="text">200</div>
+                    </div>
+                    <div onClick="color(this)" class="box light-green lighten-2">
+                        <div class="text">300</div>
+                    </div>
+                    <div onClick="color(this)" class="box light-green lighten-1">
+                        <div class="text">400</div>
+                    </div>
+                    <div onClick="color(this)" class="box light-green base">
+                        <div class="text">500</div>
+                    </div>
+                    <div onClick="color(this)" class="box light-green darken-1">
+                        <div class="text">600</div>
+                    </div>
+                    <div onClick="color(this)" class="box light-green darken-2">
+                        <div class="text">700</div>
+                    </div>
+                    <div onClick="color(this)" class="box light-green darken-3">
+                        <div class="text">800</div>
+                    </div>
+                    <div onClick="color(this)" class="box light-green darken-4">
+                        <div class="text">900</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-1 col-xs-1 col-sm-1  nopadding">
+            <div class="col-xs-24  nopadding">
+                <div class="lime">
+                    <div onClick="color(this)" class="box lime base">
+                        <div class="text">
+                            Base
+                        </div>
+                    </div>
+                    <div onClick="color(this)" class="box lime lighten-5">
+                        <div class="text">50</div>
+                    </div>
+                    <div onClick="color(this)" class="box lime lighten-4">
+                        <div class="text">100</div>
+                    </div>
+                    <div onClick="color(this)" class="box lime lighten-3">
+                        <div class="text">200</div>
+                    </div>
+                    <div onClick="color(this)" class="box lime lighten-2">
+                        <div class="text">300</div>
+                    </div>
+                    <div onClick="color(this)" class="box lime lighten-1">
+                        <div class="text">400</div>
+                    </div>
+                    <div onClick="color(this)" class="box lime base">
+                        <div class="text">500</div>
+                    </div>
+                    <div onClick="color(this)" class="box lime darken-1">
+                        <div class="text">600</div>
+                    </div>
+                    <div onClick="color(this)" class="box lime darken-2">
+                        <div class="text">700</div>
+                    </div>
+                    <div onClick="color(this)" class="box lime darken-3">
+                        <div class="text">800</div>
+                    </div>
+                    <div onClick="color(this)" class="box lime darken-4">
+                        <div class="text">900</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-1 col-xs-1 col-sm-1  nopadding">
+            <div class="col-xs-24  nopadding">
+                <div class="yellow">
+                    <div onClick="color(this)" class="box yellow base">
+                        <div class="text">
+                            Base
+                        </div>
+                    </div>
+                    <div onClick="color(this)" class="box yellow lighten-5">
+                        <div class="text">50</div>
+                    </div>
+                    <div onClick="color(this)" class="box yellow lighten-4">
+                        <div class="text">100</div>
+                    </div>
+                    <div onClick="color(this)" class="box yellow lighten-3">
+                        <div class="text">200</div>
+                    </div>
+                    <div onClick="color(this)" class="box yellow lighten-2">
+                        <div class="text">300</div>
+                    </div>
+                    <div onClick="color(this)" class="box yellow lighten-1">
+                        <div class="text">400</div>
+                    </div>
+                    <div onClick="color(this)" class="box yellow base">
+                        <div class="text">500</div>
+                    </div>
+                    <div onClick="color(this)" class="box yellow darken-1">
+                        <div class="text">600</div>
+                    </div>
+                    <div onClick="color(this)" class="box yellow darken-2">
+                        <div class="text">700</div>
+                    </div>
+                    <div onClick="color(this)" class="box yellow darken-3">
+                        <div class="text">800</div>
+                    </div>
+                    <div onClick="color(this)" class="box yellow darken-4">
+                        <div class="text">900</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-1 col-xs-1 col-sm-1  nopadding">
+            <div class="col-xs-24  nopadding">
+                <div class="amber">
+                    <div onClick="color(this)" class="box amber base">
+                        <div class="text">
+                            Base
+                        </div>
+                    </div>
+                    <div onClick="color(this)" class="box amber lighten-5">
+                        <div class="text">50</div>
+                    </div>
+                    <div onClick="color(this)" class="box amber lighten-4">
+                        <div class="text">100</div>
+                    </div>
+                    <div onClick="color(this)" class="box amber lighten-3">
+                        <div class="text">200</div>
+                    </div>
+                    <div onClick="color(this)" class="box amber lighten-2">
+                        <div class="text">300</div>
+                    </div>
+                    <div onClick="color(this)" class="box amber lighten-1">
+                        <div class="text">400</div>
+                    </div>
+                    <div onClick="color(this)" class="box amber base">
+                        <div class="text">500</div>
+                    </div>
+                    <div onClick="color(this)" class="box amber darken-1">
+                        <div class="text">600</div>
+                    </div>
+                    <div onClick="color(this)" class="box amber darken-2">
+                        <div class="text">700</div>
+                    </div>
+                    <div onClick="color(this)" class="box amber darken-3">
+                        <div class="text">800</div>
+                    </div>
+                    <div onClick="color(this)" class="box amber darken-4">
+                        <div class="text">900</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-1 col-xs-1 col-sm-1  nopadding">
+            <div class="col-xs-24  nopadding">
+                <div class="orange">
+                    <div onClick="color(this)" class="box orange base">
+                        <div class="text">
+                            Base
+                        </div>
+                    </div>
+                    <div onClick="color(this)" class="box orange lighten-5">
+                        <div class="text">50</div>
+                    </div>
+                    <div onClick="color(this)" class="box orange lighten-4">
+                        <div class="text">100</div>
+                    </div>
+                    <div onClick="color(this)" class="box orange lighten-3">
+                        <div class="text">200</div>
+                    </div>
+                    <div onClick="color(this)" class="box orange lighten-2">
+                        <div class="text">300</div>
+                    </div>
+                    <div onClick="color(this)" class="box orange lighten-1">
+                        <div class="text">400</div>
+                    </div>
+                    <div onClick="color(this)" class="box orange base">
+                        <div class="text">500</div>
+                    </div>
+                    <div onClick="color(this)" class="box orange darken-1">
+                        <div class="text">600</div>
+                    </div>
+                    <div onClick="color(this)" class="box orange darken-2">
+                        <div class="text">700</div>
+                    </div>
+                    <div onClick="color(this)" class="box orange darken-3">
+                        <div class="text">800</div>
+                    </div>
+                    <div onClick="color(this)" class="box orange darken-4">
+                        <div class="text">900</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-1 col-xs-1 col-sm-1  nopadding">
+            <div class="col-xs-24  nopadding">
+                <div class="deep-orange">
+                    <div onClick="color(this)" class="box deep-orange base">
+                        <div class="text">
+                            Base
+                        </div>
+                    </div>
+                    <div onClick="color(this)" class="box deep-orange lighten-5">
+                        <div class="text">50</div>
+                    </div>
+                    <div onClick="color(this)" class="box deep-orange lighten-4">
+                        <div class="text">100</div>
+                    </div>
+                    <div onClick="color(this)" class="box deep-orange lighten-3">
+                        <div class="text">200</div>
+                    </div>
+                    <div onClick="color(this)" class="box deep-orange lighten-2">
+                        <div class="text">300</div>
+                    </div>
+                    <div onClick="color(this)" class="box deep-orange lighten-1">
+                        <div class="text">400</div>
+                    </div>
+                    <div onClick="color(this)" class="box deep-orange base">
+                        <div class="text">500</div>
+                    </div>
+                    <div onClick="color(this)" class="box deep-orange darken-1">
+                        <div class="text">600</div>
+                    </div>
+                    <div onClick="color(this)" class="box deep-orange darken-2">
+                        <div class="text">700</div>
+                    </div>
+                    <div onClick="color(this)" class="box deep-orange darken-3">
+                        <div class="text">800</div>
+                    </div>
+                    <div onClick="color(this)" class="box deep-orange darken-4">
+                        <div class="text">900</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-1 col-xs-1 col-sm-1  nopadding">
+            <div class="col-xs-24  nopadding">
+                <div class="brown">
+                    <div onClick="color(this)" class="box brown base">
+                        <div class="text">
+                            Base
+                        </div>
+                    </div>
+                    <div onClick="color(this)" class="box brown lighten-5">
+                        <div class="text">50</div>
+                    </div>
+                    <div onClick="color(this)" class="box brown lighten-4">
+                        <div class="text">100</div>
+                    </div>
+                    <div onClick="color(this)" class="box brown lighten-3">
+                        <div class="text">200</div>
+                    </div>
+                    <div onClick="color(this)" class="box brown lighten-2">
+                        <div class="text">300</div>
+                    </div>
+                    <div onClick="color(this)" class="box brown lighten-1">
+                        <div class="text">400</div>
+                    </div>
+                    <div onClick="color(this)" class="box brown base">
+                        <div class="text">500</div>
+                    </div>
+                    <div onClick="color(this)" class="box brown darken-1">
+                        <div class="text">600</div>
+                    </div>
+                    <div onClick="color(this)" class="box brown darken-2">
+                        <div class="text">700</div>
+                    </div>
+                    <div onClick="color(this)" class="box brown darken-3">
+                        <div class="text">800</div>
+                    </div>
+                    <div onClick="color(this)" class="box brown darken-4">
+                        <div class="text">900</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-1 col-xs-1 col-sm-1  nopadding">
+            <div class="col-xs-24  nopadding">
+                <div class="grey">
+                    <div onClick="color(this)" class="box grey base">
+                        <div class="text">
+                            Base
+                        </div>
+                    </div>
+                    <div onClick="color(this)" class="box grey lighten-5">
+                        <div class="text">50</div>
+                    </div>
+                    <div onClick="color(this)" class="box grey lighten-4">
+                        <div class="text">100</div>
+                    </div>
+                    <div onClick="color(this)" class="box grey lighten-3">
+                        <div class="text">200</div>
+                    </div>
+                    <div onClick="color(this)" class="box grey lighten-2">
+                        <div class="text">300</div>
+                    </div>
+                    <div onClick="color(this)" class="box grey lighten-1">
+                        <div class="text">400</div>
+                    </div>
+                    <div onClick="color(this)" class="box grey base">
+                        <div class="text">500</div>
+                    </div>
+                    <div onClick="color(this)" class="box grey darken-1">
+                        <div class="text">600</div>
+                    </div>
+                    <div onClick="color(this)" class="box grey darken-2">
+                        <div class="text">700</div>
+                    </div>
+                    <div onClick="color(this)" class="box grey darken-3">
+                        <div class="text">800</div>
+                    </div>
+                    <div onClick="color(this)" class="box grey darken-4">
+                        <div class="text">900</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-1 col-xs-1 col-sm-1  nopadding">
+            <div class="col-xs-24  nopadding">
+                <div class="blue-grey">
+                    <div onClick="color(this)" class="box blue-grey base">
+                        <div class="text">
+                            Base
+                        </div>
+                    </div>
+                    <div onClick="color(this)" class="box blue-grey lighten-5">
+                        <div class="text">50</div>
+                    </div>
+                    <div onClick="color(this)" class="box blue-grey lighten-4">
+                        <div class="text">100</div>
+                    </div>
+                    <div onClick="color(this)" class="box blue-grey lighten-3">
+                        <div class="text">200</div>
+                    </div>
+                    <div onClick="color(this)" class="box blue-grey lighten-2">
+                        <div class="text">300</div>
+                    </div>
+                    <div onClick="color(this)" class="box blue-grey lighten-1">
+                        <div class="text">400</div>
+                    </div>
+                    <div onClick="color(this)" class="box blue-grey base">
+                        <div class="text">500</div>
+                    </div>
+                    <div onClick="color(this)" class="box blue-grey darken-1">
+                        <div class="text">600</div>
+                    </div>
+                    <div onClick="color(this)" class="box blue-grey darken-2">
+                        <div class="text">700</div>
+                    </div>
+                    <div onClick="color(this)" class="box blue-grey darken-3">
+                        <div class="text">800</div>
+                    </div>
+                    <div onClick="color(this)" class="box blue-grey darken-4">
+                        <div class="text">900</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-5 col-xs-5 col-sm-5">
+            <div class="showData">
+                <label for="shex">#HEX</label>
+                <input onClick="this.setSelectionRange(0, this.value.length)" type="text" id="shex">
+                <label for="hex">HEX</label>
+                <input onClick="this.setSelectionRange(0, this.value.length)" type="text" id="hex">
+                <label for="rgb">RGB</label>
+                <input onClick="this.setSelectionRange(0, this.value.length)" type="text" id="rgb">
+                <label for="rgba">RGBA</label>
+                <input onClick="this.setSelectionRange(0, this.value.length)" type="text" id="rgba">
+                <div class="demo" id="demo">
+                    <div class="type" id="type"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+
+  const { clipboard, remote, shell } = require('electron');
+
+  storage        = window.localStorage;
+  var welcomeBox = document.getElementById("welcomeBox");
+
+  if (storage.getItem("wBoxShow") === null) {
+    storage.setItem("wBoxShow", true);
+  }
+  if (storage.getItem("wBoxShow") === true) {
+    welcomeBox.style.display = "inherit";
+  } else {
+    welcomeBox.style.display = "none"
+  }
+
+  var nsa = false;
+  function notShowAgain(e) {
+    if (nsa) {
+      storage.setItem("wBoxShow", true);
+      nsa                     = false;
+      var wCheck              = document.getElementById("wCheck");
+      wCheck.style.display    = "none";
+      e.style.backgroundColor = "#e53935"
+    } else {
+      storage.setItem("wBoxShow", false);
+      nsa                     = true;
+      var wCheck              = document.getElementById("wCheck");
+      wCheck.style.display    = "inherit";
+      e.style.backgroundColor = "#4CAF50"
+    }
+  }
+  function closeWBox(e) {
+    welcomeBox.style.display = "none"
+  }
+  function openWBox(e) {
+    welcomeBox.style.display   = "inherit";
+    var notShowAgain           = document.getElementById("notShowAgain");
+    notShowAgain.style.display = "none";
+
+  }
+
+
+  if (storage.getItem("typeSelect") === null) {
+    storage.setItem("typeSelect", true);
+    storage.setItem("type", "HEX");
+  }
+
+  var item = document.getElementById('copyType').value = storage.getItem("type");
+  item.selected = 'selected';
+  function copyType(v) {
+    storage.setItem("typeSelect", false);
+    storage.setItem("type", v.options[v.selectedIndex].text);
+  }
+  var type, name, hcode;
+  function color(box) {
+    if (!storage.getItem("typeSelect")) {
+      clipboard.writeText(rgbToHex(window.getComputedStyle(box, null).getPropertyValue("background-color")));
+    } else {
+      switch (storage.getItem("type")) {
+        case "HEX":
+          clipboard.writeText(rgbToHex(window.getComputedStyle(box, null).getPropertyValue("background-color")));
+          break;
+        case "#HEX":
+          clipboard.writeText(rgbToSHex(window.getComputedStyle(box, null).getPropertyValue("background-color")));
+          break;
+        case "RGBA":
+          clipboard.writeText(hexToRgbA(rgbToSHex(window.getComputedStyle(box, null).getPropertyValue("background-color"))));
+          break;
+        case "RGB":
+          clipboard.writeText(window.getComputedStyle(box, null).getPropertyValue("background-color"));
+          break;
+        default:
+          break
+      }
+    }
+
+
+    var shex   = document.getElementById("shex");
+    var hex    = document.getElementById("hex");
+    var rgba   = document.getElementById("rgba");
+    var rgb    = document.getElementById("rgb");
+    rgb.value  = window.getComputedStyle(box, null).getPropertyValue("background-color");
+    shex.value = rgbToSHex(window.getComputedStyle(box, null).getPropertyValue("background-color"));
+    hex.value  = rgbToHex(window.getComputedStyle(box, null).getPropertyValue("background-color"));
+    rgba.value = hexToRgbA(rgbToSHex(window.getComputedStyle(box, null).getPropertyValue("background-color")));
+
+    var demo                   = document.getElementById("demo");
+    var type                   = document.getElementById("type");
+    type.innerHTML             = box.textContent;
+    demo.style.backgroundColor = window.getComputedStyle(box, null).getPropertyValue("background-color");
+  }
+
+  function openCreator() {
+    event.preventDefault();
+    shell.openExternal("https://github.com/taluttasgiran");
+  }
+  function openUrl(url) {
+    event.preventDefault();
+    shell.openExternal(url);
+  }
+  function cls() {
+    var window = remote.getCurrentWindow();
+    window.close();
+  }
+  function min() {
+    var window = remote.getCurrentWindow();
+    window.minimize();
+
+  }
+</script>
+<script src="assets/js/script.js" type="text/javascript"></script>
+</body>
+</html>

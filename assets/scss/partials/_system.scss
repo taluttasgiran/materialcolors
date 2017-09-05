@@ -1,0 +1,165 @@
+@mixin flexcenter() {
+  display                 : -webkit-flex;
+  display                 : -webkit-box;
+  display                 : -ms-flexbox;
+  display                 : flex;
+  -webkit-align-items     : center;
+  -webkit-box-align       : center;
+  -ms-flex-align          : center;
+  align-items             : center;
+  -webkit-justify-content : center;
+  -webkit-box-pack        : center;
+  -ms-flex-pack           : center;
+  justify-content         : center;
+  }
+
+@function color($type,$opacity) {
+  @if ($type == "primary") {
+    @return (rgba(205, 33, 71, $opacity))
+    } @else if ($type == "secondary") {
+    @return (rgba(60, 72, 79, $opacity))
+    }
+  @return (rgba(255, 255, 255, $opacity))
+  }
+
+.nopadding {
+  margin  : 0 !important;
+  padding : 0 !important;
+  }
+
+.no-left-p {
+  margin-left  : 0 !important;
+  padding-left : 0 !important;
+  }
+
+.no-right-p {
+  margin-right  : 0 !important;
+  padding-right : 0 !important;
+  }
+
+.padding-rl-25 {
+  padding-left  : 25px !important;
+  padding-right : 25px !important;
+  }
+
+.padding-15 {
+  padding : 15px !important;
+  }
+
+.padding-10 {
+  padding : 10px !important;
+  }
+
+.padding-5 {
+  padding : 5px !important;
+  }
+
+.clearfix:before,
+.clearfix:after {
+  content : " ";
+  display : table;
+  }
+
+.marginTop-25 {
+  margin-top : 25px !important;
+  }
+
+.marginTop-50 {
+  margin-top : 50px !important;
+  }
+
+.marginTop-75 {
+  margin-top : 75px !important;
+  }
+
+.marginBottom-25 {
+  margin-bottom : 25px !important;
+  }
+
+.marginBottom-50 {
+  margin-bottom : 50px !important;
+  }
+
+.marginBottom-75 {
+  margin-bottom : 75px !important;
+  }
+
+.marginRight-25 {
+  margin-right : 25px !important;
+  }
+
+.marginRight-50 {
+  margin-right : 50px !important;
+  }
+
+.marginRight-75 {
+  margin-right : 75px !important;
+  }
+
+.marginLeft-25 {
+  margin-left : 25px !important;
+  }
+
+.marginLeft-50 {
+  margin-left : 50px !important;
+  }
+
+.marginLeft-75 {
+  margin-left : 75px !important;
+  }
+
+.clearfix:after {
+  clear : both;
+  }
+
+html {
+  font-size : 62.5%;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  }
+
+body {
+  background-color : #ffffff;
+  font-family      : "Quicksand", Arial, sans-serif !important;
+  position         : relative;
+  border           : 4px solid #f1f1f1;
+  }
+
+.centered {
+  @include flexcenter;
+  }
+
+input[type=checkbox] {
+  display : none;
+  }
+
+/* to hide the checkbox itself */
+input[type=checkbox] + label:before {
+  display       : inline-block;
+  font-family   : FontAwesome;
+  padding-right : 10px !important;
+  }
+
+input[type=checkbox] + label:before {
+  content : "\f096";
+  }
+
+/* unchecked icon */
+input[type=checkbox] + label:before {
+  letter-spacing : 5px;
+  }
+
+/* space between checkbox and label */
+
+input[type=checkbox]:checked + label:before {
+  content : "\f046";
+  }
+
+/* checked icon */
+input[type=checkbox]:checked + label:before {
+  letter-spacing : 3px;
+  }
+
+/* allow space for check mark */

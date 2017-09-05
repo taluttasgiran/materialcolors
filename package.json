@@ -1,0 +1,10 @@
+{
+  "name": "materialColors",
+  "version": "0.1.0",
+  "main": "main.js",
+  "dependencies": {
+    "electron-winstaller": "^2.6.3",
+    "electron-squirrel-startup": "^1.0.0",
+    "electron": "^1.7.5"
+  }
+}
