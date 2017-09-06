@@ -37,6 +37,5 @@ Material Colors is a simple color app powered with Electron
  - [Electron Installer](https://github.com/electron/windows-installer) (windows-installer)
  
  <p align="center">
-<img src="https://raw.githubusercontent.com/taluttasgiran/materialcolors/master/assets/install.gif" />
+<img width="256" height="256" src="https://raw.githubusercontent.com/taluttasgiran/materialcolors/master/assets/install.gif" />
 </p>
- 
