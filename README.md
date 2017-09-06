@@ -35,3 +35,8 @@ Material Colors is a simple color app powered with Electron
  - [Electron Packager](https://github.com/electron-userland/electron-packager)
  - [electron-squirrel-startup](https://github.com/mongodb-js/electron-squirrel-startup)
  - [Electron Installer](https://github.com/electron/windows-installer) (windows-installer)
+ 
+ <p align="center">
+<img src="https://raw.githubusercontent.com/taluttasgiran/materialcolors/master/assets/install.gif" />
+</p>
+ 
